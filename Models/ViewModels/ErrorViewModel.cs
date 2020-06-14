@@ -1,6 +1,6 @@
 using System;
 
-namespace PRORegister.Models
+namespace PRORegister.Models.ViewModels
 {
     public class ErrorViewModel
     {

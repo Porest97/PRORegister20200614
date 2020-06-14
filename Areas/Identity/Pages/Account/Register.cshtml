@@ -43,9 +43,18 @@
                     <input asp-for="Input.ConfirmPassword" class="form-control" />
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                 </div>
-            </div>      
-
-        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Input.SSN"></label>
+                    <input asp-for="Input.SSN" class="form-control" />
+                    <span asp-validation-for="Input.SSN" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Input.PhoneNumber"></label>
@@ -55,36 +64,33 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Input.SSN"></label>
-                    <input asp-for="Input.SSN" class="form-control" />
-                    <span asp-validation-for="Input.SSN" class="text-danger"></span>
-                </div>
-            </div>
-        
-            <div class="col-md-6">
-                <div class="form-group">
                     <label asp-for="Input.StreetAddress"></label>
                     <input asp-for="Input.StreetAddress" class="form-control" />
                     <span asp-validation-for="Input.StreetAddress" class="text-danger"></span>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Input.ZipCode"></label>
-                    <input asp-for="Input.ZipCode" class="form-control" />
-                    <span asp-validation-for="Input.ZipCode" class="text-danger"></span>
+        </div>
+        <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Input.ZipCode"></label>
+                        <input asp-for="Input.ZipCode" class="form-control" />
+                        <span asp-validation-for="Input.ZipCode" class="text-danger"></span>
+                    </div>
                 </div>
-            </div>  
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Input.Country"></label>
-                    <input asp-for="Input.Country" class="form-control" />
-                    <span asp-validation-for="Input.Country" class="text-danger"></span>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Input.Country"></label>
+                        <input asp-for="Input.Country" class="form-control" />
+                        <span asp-validation-for="Input.Country" class="text-danger"></span>
+                    </div>
                 </div>
+        </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-block btn-primary">Register</button>
                 </div>
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-sm btn-primary">Register</button>
-                </div>
+             </div>
 </form>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

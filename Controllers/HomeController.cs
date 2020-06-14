@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PRORegister.Models;
+using PRORegister.Models.ViewModels;
 
 namespace PRORegister.Controllers
 {

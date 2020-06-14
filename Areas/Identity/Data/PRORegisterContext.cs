@@ -17,7 +17,7 @@ namespace PRORegister.Data
         {
         }
 
-        public object Person { get; internal set; }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
