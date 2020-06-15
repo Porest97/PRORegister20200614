@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PRORegister.Data;
 
 namespace PRORegister.Migrations
 {
     [DbContext(typeof(PRORegisterContext))]
-    partial class PRORegisterContextModelSnapshot : ModelSnapshot
+    [Migration("20200614230744_DAIF2020DaaModesAdded")]
+    partial class DAIF2020DaaModesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

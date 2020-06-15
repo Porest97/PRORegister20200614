@@ -1,0 +1,53 @@
+﻿@model PRORegister.DAIF2020.Models.ViewModels.DataViewModel
+@{
+    ViewData["Title"] = "ListArenas";
+}
+
+<h1>Arenas</h1>
+
+<a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="Create">Create new arena</a>
+<a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="IndexSearch">Search for Arena by name</a>
+<a class="btn btn-sm btn-success" asp-controller="DAIF2020" asp-action="Index">Back to DAIF2020</a>
+
+<table class="table table-responsive-sm table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Arenas[0].ArenaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arenas[0].Address)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.Arenas[0].ArenaStatus)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Arenas.OrderBy(a => a.ArenaName))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArenaName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArenaStatus.StatusName)
+                </td>
+
+                <td>
+                    <a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a class="btn btn-sm btn-danger" asp-controller="Arenas" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

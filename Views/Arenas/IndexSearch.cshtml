@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PRORegister.DAIF2020.Models.DataModels.Arena>
+
+@{
+    ViewData["Title"] = "IndexSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="badge">
+
+    <h3>Arenas name search</h3>
+
+
+
+    <form asp-controller="Arenas" asp-action="IndexSearch">
+        <p>
+            Search for Arenaname: <input type="text" name="SearchString">
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+    <p>
+        <a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="Create">Create new Arena</a>
+    </p>
+
+    <table class="table table-responsive-sm table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ArenaNumber)</th>
+
+                <th>@Html.DisplayNameFor(model => model.ArenaName)</th>
+
+
+                <th>@Html.DisplayNameFor(model => model.Address)</th>
+                <th>@Html.DisplayNameFor(model => model.ArenaStatus)</th>
+
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderBy(a => a.ArenaName))
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.ArenaNumber)</td>
+
+                    <td> @Html.DisplayFor(modelItem => item.ArenaName)</td>
+
+                    <td> @Html.DisplayFor(modelItem => item.Address)</td>
+                    <td> @Html.DisplayFor(modelItem => item.ArenaStatus.StatusName)</td>
+
+                    
+
+
+                    <td>
+                        <a class="btn btn-sm btn-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-sm btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-sm btn-success" asp-controller="Arenas" asp-action="ListArenas">Back to Arena List</a>
+</div>
