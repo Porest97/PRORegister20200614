@@ -16,7 +16,9 @@ namespace PRORegister.Data
             : base(options)
         {
         }
-
+        /// <summary>
+        /// DAIF2020 !
+        /// </summary>
         public DbSet<DAIF2020.Models.DataModels.Arena> Arena { get; set; }
         public DbSet<DAIF2020.Models.DataModels.ArenaStatus> ArenaStatus { get; set; }
         public DbSet<DAIF2020.Models.DataModels.Club> Club { get; set; }
@@ -28,41 +30,77 @@ namespace PRORegister.Data
         public DbSet<DAIF2020.Models.DataModels.RefType> RefType { get; set; }
         public DbSet<DAIF2020.Models.DataModels.GameType> GameType { get; set; }
         public DbSet<DAIF2020.Models.DataModels.GameStatus> GameStatus { get; set; }
-        public DbSet<DAIF2020.Models.DataModels.GameCategory> GameCategory { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.ReceiptCategory> ReceiptCategory { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.ReceiptStatus> ReceiptStatus { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.ReceiptType> ReceiptType { get; set; }
-        public DbSet<DAIF2020.Models.DataModels.Game> Game { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.Zone> Zone { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.ZoneGame> ZoneGame { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.PoolGame> PoolGame { get; set; }
-        public DbSet<DAIF2020.Models.DataModels.SeriesStatus> SeriesStatus { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.TeamStatus> TeamStatus { get; set; }
+        public DbSet<DAIF2020.Models.DataModels.GameCategory> GameCategory { get; set; }        
+        public DbSet<DAIF2020.Models.DataModels.Game> Game { get; set; }         
+        public DbSet<DAIF2020.Models.DataModels.SeriesStatus> SeriesStatus { get; set; }        
         public DbSet<DAIF2020.Models.DataModels.Series> Series { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.Team> Team { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.TeamRoster> TeamRoster { get; set; }
-        //public DbSet<DAIF2020.TheLab.Models.DataModels.Receipt> Receipt { get; set; }
-        //public DbSet<DAIF2020.TheLab.Models.DataModels.PoolGameReceipt> PoolGameReceipt { get; set; }
-        //public DbSet<DAIF2020.TheLab.Models.DataModels.ZoneGameReceipt> ZoneGameReceipt { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.Tornament> Tornament { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.TournamentType> TournamentType { get; set; }
-        //public DbSet<DAIF2020.TheLab.Models.DataModels.WeeklyReceipt> WeeklyReciept { get; set; }
-        //public DbSet<DAIF2020.TSM.Models.DataModels.TSMGameStatus> TSMGameStatus { get; set; }
-        //public DbSet<DAIF2020.TSM.Models.DataModels.TSMGame> TSMGame { get; set; }
-        //public DbSet<DAIF2020.Models.SettingModels.ActivityStatus> ActivityStatus { get; set; }
-        //public DbSet<DAIF2020.Planner.Models.DataModels.Activity> Activity { get; set; }
-        //public DbSet<DAIF2020.Planner.Models.DataModels.Meeting> Meeting { get; set; }
-        //public DbSet<DAIF2020.Planner.Models.DataModels.Location> Location { get; set; }
-        //public DbSet<DAIF2020.TSM.Models.DataModels.Game20192020> Game20192020 { get; set; }
-        //public DbSet<DAIF2020.CleverServiceIX.DataModels.PZGame> PZGame { get; set; }
-        //public DbSet<DAIF2020.CleverServiceIX.DataModels.PZGameReceipt> PZGameReceipt { get; set; }
-        //public DbSet<DAIF2020.CleverServiceIX.DataModels.RefFees> RefFees { get; set; }
-        //public DbSet<DAIF2020.CleverServiceIX.DataModels.CSMatch> CSMatch { get; set; }
-        //public DbSet<DAIF2020.SRHLStats2020.Models.DataModels.Match> Match { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.ArchivedGame> ArchivedGame { get; set; }
-        //public DbSet<DAIF2020.Models.DataModels.Hockey4LifeLog> Hockey4LifeLog { get; set; }
-        //public DbSet<DAIF2020.SportsLogs.Models.DataModels.Sport> Sport { get; set; }
-        //public DbSet<DAIF2020.SportsLogs.Models.DataModels.SportsLog> SportsLog { get; set; }
+        DbSet<SportsContacts.Models.SportsContact> SportsContact { get; set; }
+
+        /// <summary>
+        /// PRONBS !
+        /// </summary>
+        /// <param name="builder"></param>
+        //Assets !
+        public DbSet<PRONBS.Models.DataModels.Asset> Asset { get; set; }
+        public DbSet<PRONBS.Models.DataModels.AssetBrand> AssetBrand { get; set; }
+        public DbSet<PRONBS.Models.DataModels.AssetStatus> AssetStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.AssetType> AssetType { get; set; }
+        //Bills !
+        public DbSet<PRONBS.Models.DataModels.Bill> Bill { get; set; }
+        public DbSet<PRONBS.Models.DataModels.BillStatus> BillStatus { get; set; }
+        //Companies !
+        public DbSet<PRONBS.Models.DataModels.Company> Company { get; set; }
+        public DbSet<PRONBS.Models.DataModels.CompanyRole> CompanyRole { get; set; }
+        public DbSet<PRONBS.Models.DataModels.CompanyStatus> CompanyStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.CompanyType> CompanyType { get; set; }
+        //Incidents !
+        public DbSet<PRONBS.Models.DataModels.Incident> Incident { get; set; }
+        public DbSet<PRONBS.Models.DataModels.IncidentPriority> IncidentPriority { get; set; }
+        public DbSet<PRONBS.Models.DataModels.IncidentStatus> IncidentStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.IncidentType> IncidentType { get; set; }
+        public DbSet<PRONBS.Models.DataModels.MtrlList> MtrlList { get; set; }
+        //NABLogs !
+        public DbSet<PRONBS.Models.DataModels.NABLog> NABLog { get; set; }
+        public DbSet<PRONBS.Models.DataModels.NABLogStatus> NABLogStatus { get; set; }       
+        //Offers !
+        public DbSet<PRONBS.Models.DataModels.Offer> Offer { get; set; }
+        public DbSet<PRONBS.Models.DataModels.OfferStatus> OfferStatus { get; set; }        
+        //People !
+        public DbSet<PRONBS.Models.DataModels.Person> Person { get; set; }
+        public DbSet<PRONBS.Models.DataModels.PersonAccounts> PersonAccounts { get; set; }
+        public DbSet<PRONBS.Models.DataModels.PersonRole> PersonRole { get; set; }
+        public DbSet<PRONBS.Models.DataModels.PersonStatus> PersonStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.PersonType> PersonType { get; set; }
+        //Plans !
+        public DbSet<PRONBS.Models.DataModels.Plan> Plan { get; set; }
+        public DbSet<PRONBS.Models.DataModels.PlanStatus> PlanStatus { get; set; }        
+        public DbSet<PRONBS.Models.DataModels.Stage> Stage { get; set; }
+        public DbSet<PRONBS.Models.DataModels.StageStatus> StageStatus { get; set; }
+        //Projects !
+        public DbSet<PRONBS.Models.DataModels.Project> Project { get; set; }        
+        public DbSet<PRONBS.Models.DataModels.ProjectStatus> ProjectStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.ProjectType> ProjectType { get; set; }
+        //Reports !
+        public DbSet<PRONBS.Models.DataModels.Report> Report { get; set; }
+        public DbSet<PRONBS.Models.DataModels.ReportStatus> ReportStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.ReportType> ReportType { get; set; }
+        public DbSet<PRONBS.Models.DataModels.ProjectReport> ProjectReport { get; set; }
+        //PurchaseOrders!
+        public DbSet<PRONBS.Models.DataModels.PurchaseOrder> PurchaseOrder { get; set; }
+        //Sites !
+        public DbSet<PRONBS.Models.DataModels.Site> Site { get; set; }
+        public DbSet<PRONBS.Models.DataModels.SiteRole> SiteRole { get; set; }
+        public DbSet<PRONBS.Models.DataModels.SiteStatus> SiteStatus { get; set; }
+        public DbSet<PRONBS.Models.DataModels.SiteType> SiteType { get; set; }
+        //WLogs !
+        public DbSet<PRONBS.Models.DataModels.WLog> WLog { get; set; }
+        public DbSet<PRONBS.Models.DataModels.WLogStatus> WLogStatus { get; set; }
+        
+          
+        
+        
+        
+       
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
