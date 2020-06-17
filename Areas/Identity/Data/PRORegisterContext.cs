@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PRORegister.Areas.Identity.Data;
+using PRORegister.PRONBS.Models.DataModels;
 
 namespace PRORegister.Data
 {
@@ -59,6 +60,8 @@ namespace PRORegister.Data
         public DbSet<PRONBS.Models.DataModels.IncidentStatus> IncidentStatus { get; set; }
         public DbSet<PRONBS.Models.DataModels.IncidentType> IncidentType { get; set; }
         public DbSet<PRONBS.Models.DataModels.MtrlList> MtrlList { get; set; }
+        //Images !
+        public DbSet<ImageModel> Images { get; set; }
         //NABLogs !
         public DbSet<PRONBS.Models.DataModels.NABLog> NABLog { get; set; }
         public DbSet<PRONBS.Models.DataModels.NABLogStatus> NABLogStatus { get; set; }       
