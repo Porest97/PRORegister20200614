@@ -19,8 +19,8 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageName" class="control-label"></label>
-                <input asp-for="ImageName" class="form-control" />
+                @*<label asp-for="ImageName" class="control-label"></label>*@
+                <input type="hidden" asp-for="ImageName" class="form-control" />
                 <span asp-validation-for="ImageName" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,8 +30,16 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="row flex-xl-grow-1">
+    @*<div class="col-md-4">
+        <a class="btn btn-sm btn-block btn-outline-success" asp-controller="Image" asp-action="Edit" asp-route-id="@Model.ImageId">Edit</a>
+    </div>*@
+    <div class="col-md-4">
+        <a class="btn btn-sm btn-block btn-outline-success" asp-controller="Image" asp-action="Index">Back to Images</a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-sm btn-block btn-outline-success" asp-controller="PRONBS" asp-action="Index">Back to PRO NBS</a>
+    </div>
 </div>
 
 @section Scripts {
