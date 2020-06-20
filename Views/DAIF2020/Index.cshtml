@@ -1,13 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h1>DAIF 2020 !</h1>
+﻿<div class="col-sm-6">
+    <h1>DAIF 2020 !</h1>
 
-<h2>Arenas</h2>
-<ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Arenas" asp-action="ListArenas">Arenas</a>
-    </li>
-</ul>
+    <h2>Arenas</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Arenas" asp-action="ListArenas">Arenas</a>
+        </li>
+    </ul>
+
+    <div class="badge-pill">
+        <a class="btn btn-lg btn-outline-success btn-block" asp-area="" asp-controller="Home" asp-action="Index">Back to Main menu !</a>
+    </div>
+</div>

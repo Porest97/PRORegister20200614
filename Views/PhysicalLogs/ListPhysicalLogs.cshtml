@@ -1,0 +1,50 @@
+﻿@model PRORegister.PORLifeLog.Models.ViewModels.DataViewModel
+@{
+    ViewData["Title"] = "ListPhysicalLogs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="badge">
+    <h1>Physical logs</h1>
+
+    <a class="btn btn-sm btn-success" asp-controller="PhysicalLogs" asp-action="Create">Create new PhysicalLog</a>
+    <a class="btn btn-sm btn-success" asp-controller="PhysicalLogs" asp-action="IndexPhysicalLogs">To Physicallogs - User Search</a>
+    <a class="btn btn-sm btn-success" asp-controller="DAIF2020" asp-action="Index">Back to DAIF2020</a>
+
+
+
+    <table class="table table-responsive-sm table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.PhysicalLogs[0].Person)</th>
+                <th>@Html.DisplayNameFor(model => model.PhysicalLogs[0].DateTime)</th>
+                <th>@Html.DisplayNameFor(model => model.PhysicalLogs[0].BodyFat)</th>
+                <th>@Html.DisplayNameFor(model => model.PhysicalLogs[0].BodyWeight)</th>
+                <th>@Html.DisplayNameFor(model => model.PhysicalLogs[0].Waist)</th>
+                
+                @*<th>@Html.DisplayNameFor(model => model.NABLogs[0].MtrCost)</th>
+                    <th>@Html.DisplayNameFor(model => model.NABLogs[0].TotalCost)</th>*@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.PhysicalLogs.OrderBy(p => p.DateTime))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Person.FullName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DateTime)</td>
+                    <td>@Html.DisplayFor(modelItem => item.BodyFat)</td>
+                    <td>@Html.DisplayFor(modelItem => item.BodyWeight)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Waist)</td>
+                    
+                    @*<td>@Html.DisplayFor(modelItem => item.MtrCost)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TotalCost)</td>*@
+                    <td>
+                        <a class="btn btn-sm btn-success" asp-controller="PhysicalLogs" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-sm btn-success" asp-controller="PhysicalLogs" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        @*<a class="btn btn-sm btn-danger" asp-controller="NABLogs" asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

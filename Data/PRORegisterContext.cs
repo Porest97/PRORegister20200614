@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PRORegister.Areas.Identity.Data;
 using PRORegister.PRONBS.Models.DataModels;
 
 namespace PRORegister.Data
@@ -59,7 +58,8 @@ namespace PRORegister.Data
         public DbSet<PRONBS.Models.DataModels.IncidentPriority> IncidentPriority { get; set; }
         public DbSet<PRONBS.Models.DataModels.IncidentStatus> IncidentStatus { get; set; }
         public DbSet<PRONBS.Models.DataModels.IncidentType> IncidentType { get; set; }
-        public DbSet<PRONBS.Models.DataModels.MtrlList> MtrlList { get; set; }
+        public DbSet<PRONBS.Models.DataModels.MtrlList> MtrlList { get; set; }       
+
         //Images !
         public DbSet<ImageModel> Images { get; set; }
         //NABLogs !
@@ -98,12 +98,20 @@ namespace PRORegister.Data
         //WLogs !
         public DbSet<PRONBS.Models.DataModels.WLog> WLog { get; set; }
         public DbSet<PRONBS.Models.DataModels.WLogStatus> WLogStatus { get; set; }
-        
-          
-        
-        
-        
-       
+        ////
+        /// <summary>
+        /// //LifeLog
+        /// </summary>
+        ///  
+        public DbSet<PROLifeLog.Models.DataModels.Activity> Activity { get; set; }
+        public DbSet<PROLifeLog.Models.DataModels.FoodLog> FoodLog { get; set; }
+        public DbSet<PROLifeLog.Models.DataModels.LifeLog> LifeLog { get; set; }
+        public DbSet<PROLifeLog.Models.DataModels.LifeLogStatus> LifeLogStatus { get; set; }
+        public DbSet<PROLifeLog.Models.DataModels.PhysicalLog> PhysicalLog { get; set; }     
+
+
+
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

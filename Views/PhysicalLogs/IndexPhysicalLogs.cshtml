@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PRORegister.PROLifeLog.Models.DataModels.PhysicalLog>
+@{
+    ViewData["Title"] = "IndexPhysicalLogs";
+}
+<div class="badge">
+
+    <h3>Physical logs - Lastname - Testedpeople search</h3>
+
+
+
+    <form asp-controller="PhysicalLogs" asp-action="IndexPhysicalLogs">
+        <p>
+            Search for Lastname: <input type="text" name="SearchString">
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+   
+    <table class="table table-responsive-sm table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.DateTime)</th>
+
+
+                <th>@Html.DisplayNameFor(model => model.Person)</th>
+                <th>@Html.DisplayNameFor(model => model.BodyWeight)</th>
+
+                <th>@Html.DisplayNameFor(model => model.BodyFat)</th>
+                <th>@Html.DisplayNameFor(model => model.Waist)</th>
+
+               
+               
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderBy(p => p.DateTime)@*.Where(a => a.AssetTypeId == 1)*@)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.DateTime)</td>
+
+                    <td> @Html.DisplayFor(modelItem => item.Person.FullName)</td>
+                    <td> @Html.DisplayFor(modelItem => item.BodyWeight)</td>
+
+                    <td>@Html.DisplayFor(modelItem => item.BodyFat)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Waist)</td>
+
+                    
+
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn btn-sm btn-success" asp-controller="PhysicalLogs" asp-action="ListPhysicalLogs">Back to PhysicalLogs</a>
+</div>

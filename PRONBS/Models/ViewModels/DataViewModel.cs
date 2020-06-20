@@ -26,7 +26,7 @@ namespace PRORegister.PRONBS.Models.ViewModels
 
         public List<Site> Sites { get; internal set; }
 
-        public List<WLog> WLogs { get; internal set; }
+        public List<DataModels.WLog> WLogs { get; internal set; }
 
         public List<MtrlList> MtrlLists { get; internal set; }
 

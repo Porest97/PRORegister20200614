@@ -3,6 +3,18 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "PRORegisterContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "PRORegisterApplicationContext"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "PRORegisterInterrimesContext"
+    },
+    "mssql4": {
+      "type": "mssql.local",
+      "connectionId": "PRORegisterInstallContext"
     }
   }
 }

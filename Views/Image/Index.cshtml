@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
     <div class="badge">
@@ -9,6 +10,7 @@
 
         <p>
             <a class="btn btn-sm btn-outline-success" asp-controller="Image" asp-action="Create">Upload new Image !</a>
+            <a class="btn btn-sm btn-success" asp-controller="PRONBS" asp-action="Index">Back to PRONBS</a>
         </p>
         <table class="table table-bordered table-striped">
             <thead>

@@ -31,6 +31,12 @@ namespace PRORegister
             services.AddDbContext<PRORegisterContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("PRORegisterContextConnection")));
 
+            
+
+            
+
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

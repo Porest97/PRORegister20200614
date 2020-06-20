@@ -1,19 +1,72 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h1>PRO NBS !</h1>
-<h2>Assets</h2>
-<ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Assets" asp-action="ListAssets">Assets</a>
-    </li>
-</ul>
+﻿<div class="col-sm-6">
+    <h1>PRO NBS !</h1>
+    <h2>Assets</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Assets" asp-action="ListAssets">Assets</a>
+        </li>
+    </ul>
 
-<h2>Assets</h2>
-<ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Image" asp-action="Index">Images</a>
-    </li>
-</ul>
+    <h2>Bills</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Bills" asp-action="ListBillsCreated">Bills</a>
+        </li>
+    </ul>
+    <h2>Companies</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Companies" asp-action="ListCompanies">Companies</a>
+        </li>
+    </ul>
+
+    <h2>Images</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Image" asp-action="Index">Images</a>
+        </li>
+    </ul>
+
+
+    <h2>Incidents</h2>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Incidents" asp-action="ListIncidents">List Incidents Recived and Dispatched</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Incidents" asp-action="ListIncidentsP1">List P1 Incidents</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Incidents" asp-action="ListIncidentsP2">List P2 Incidents</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Incidents" asp-action="ListIncidentsP3">List P3 Incidents</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Incidents" asp-action="ListIncidentsSolved">List Solved Incidents</a>
+        </li>
+    </ul>
+    @*<ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+
+            </li>
+        </ul>
+        <h4>Settings Menu</h4>
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a class="btn btn-lg btn-outline-success" asp-area="" asp-controller="Home" asp-action="Settings">To Settings Menu</a>
+            </li>
+        </ul>*@
+
+    <div class="badge-pill">
+        <a class="btn btn-lg btn-outline-success btn-block" asp-area="" asp-controller="Home" asp-action="Index">Back to Main menu !</a>
+    </div>
+</div>
